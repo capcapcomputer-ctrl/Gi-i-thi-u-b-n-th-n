@@ -1,50 +1,107 @@
-</script>
-/* ====== CHỈNH THÔNG TIN CỦA BẠN Ở ĐÂY ====== */
-const PROFILE = {
-  name: "Cáp Anh Khoa",
-  background: "C:\\Users\\PC\\Downloads\\images.jpg",   // <-- %C4%90%E1%BB%94I %E1%BA%A2NH N%E1%BB%80N %E1%BB%9E %C4%90%C3%82Y
-  about: [
-    "Xin chào, mình là Khoa, mình là học sinh lớp 12 trường THPT Trần Phú và sinh sống tại TP Hồ Chí Minh",
-    "Sở thích của bản thân mình là đọc sách, lướt reels mạng xã hội, học tập và ít khi chơi game."
-    "Dự định sau này mình sẽ làm nghề cơ điện tử để viết code tạo robot hoạt động."
-  ],
-  skills: ["HTML & CSS", "JavaScript", "Thiết kế giao diện", "Kiểm thử phần mềm (software bug testing)"],
-  projects: [
-    { title: "App làm bài kiểm tra (Bản thử nghiệm)", desc: "Tự tạo bài kiểm tra để làm bài." }
-  ],
-  contacts: [
-    { label: "Email", href: "mailto:khoacap090109@gmail.com" },
-    { label: "GitHub", href: "https://github.com/imonguy" }
-    { label: "Facebook", href: "https://www.facebook.com/cap.anh.khoa" }
-  ]
-};
-/* ====== HẾT PHẦN CẦN CHỈNH ====== */
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang web giới thiệu bản thân</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* Cấu hình hình nền nền phủ toàn màn hình */
+        .bg-custom-image {
+            /* Thay link ảnh nền của bạn vào URL dưới đây */
+            background-image: linear-gradient(to bottom, rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.95)), 
+                              url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Giữ cố định ảnh nền khi cuộn trang */
+        }
+    </style>
+</head>
+<body class="bg-custom-image text-slate-100 font-sans min-h-screen flex flex-col justify-between">
 
-</script>
-const $ = id => document.getElementById(id);
-document.title = PROFILE.name + " – Giới thiệu bản thân";
-$("name").textContent = PROFILE.name;
-$("role").textContent = PROFILE.role;
+    <!-- Header / Navbar -->
+    <header class="p-6 max-w-4xl mx-auto w-full flex justify-between items-center backdrop-blur-md bg-slate-900/40 rounded-b-2xl border-b border-slate-700/30">
+        <h1 class="text-2xl font-bold text-indigo-400">MyPortfolio</h1>
+        <nav class="space-x-4 text-sm font-medium">
+            <a href="#about" class="hover:text-indigo-400 transition">Giới thiệu</a>
+            <a href="#skills" class="hover:text-indigo-400 transition">Kỹ năng</a>
+            <a href="#contact" class="hover:text-indigo-400 transition">Liên hệ</a>
+        </nav>
+    </header>
 
-PROFILE.about.forEach(t => {
-  const p = document.createElement("p"); p.textContent = t; $("about-text").appendChild(p);
-});
-PROFILE.skills.forEach(s => {
-  const li = document.createElement("li"); li.textContent = s; $("skill-list").appendChild(li);
-});
-PROFILE.projects.forEach(pr => {
-  const li = document.createElement("li");
-  const h = document.createElement("h3"); h.textContent = pr.title;
-  const p = document.createElement("p"); p.textContent = pr.desc;
-  li.append(h, p); $("project-list").appendChild(li);
-});
-PROFILE.contacts.forEach(c => {
-  const a = document.createElement("a");
-  a.textContent = c.label; a.href = c.href;
-  if (!c.href.startsWith("mailto:")) { a.target = "_blank"; a.rel = "noopener"; }
-  $("contact-list").appendChild(a);
-});
-$("footer").textContent = "© " + new Date().getFullYear() + " " + PROFILE.name;
-</script>
+    <!-- Nội dung chính -->
+    <main class="max-w-4xl mx-auto px-6 py-8 w-full space-y-16">
+        
+        <!-- Phần 1: Giới thiệu chung -->
+        <section id="about" class="flex flex-col md:flex-row items-center gap-8 py-8 backdrop-blur-sm bg-slate-900/40 p-8 rounded-2xl border border-slate-700/40 shadow-xl">
+            <div class="w-32 h-32 md:w-40 md:h-40 rounded-full bg-indigo-600 flex items-center justify-center text-5xl text-white font-bold shadow-lg shadow-indigo-500/30 flex-shrink-0">
+                <!-- Muốn đổi ảnh đại diện cá nhân, bạn thay đường dẫn ảnh vào thẻ img bên dưới: -->
+                <!-- <img src="duong-dan-anh-cua-ban.jpg" class="w-full h-full rounded-full object-cover"> -->
+                Đ
+            </div>
+            <div class="text-center md:text-left space-y-3">
+                <span class="bg-indigo-500/10 text-indigo-400 text-xs px-3 py-1 rounded-full font-medium border border-indigo-500/20">Xin chào 👋</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight">Tôi là <span class="text-indigo-400">Cáp Anh Khoa</span></h2>
+                <p class="text-slate-300 text-base leading-relaxed">
+                   Tôi rất thích Đam mê công nghệ, lập trình và khám phá những điều mới mẻ. Luôn chủ động học hỏi và phát triển bản thân mỗi ngày.
+                </p>
+                <div class="pt-2">
+                    <a href="#contact" class="inline-block bg-indigo-600 hover:bg-indigo-500 text-white font-medium px-5 py-2.5 rounded-lg transition shadow-md shadow-indigo-600/30 text-sm">
+                       
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Phần 2: Kỹ năng & Sở thích -->
+        <section id="skills" class="space-y-6 backdrop-blur-sm bg-slate-900/40 p-8 rounded-2xl border border-slate-700/40 shadow-xl">
+            <h3 class="text-xl font-bold border-b border-slate-700/60 pb-2 text-indigo-400">Kỹ năng & Sở thích</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="bg-slate-800/80 p-4 rounded-xl border border-slate-700/50 text-center hover:border-indigo-500/50 transition">
+                    <i class="fa-solid fa-calculator text-2xl text-indigo-400 mb-2"></i>
+                    <h4 class="font-semibold text-sm">Toán học</h4>
+                </div>
+                <div class="bg-slate-800/80 p-4 rounded-xl border border-slate-700/50 text-center hover:border-indigo-500/50 transition">
+                    <i class="fa-solid fa-code text-2xl text-indigo-400 mb-2"></i>
+                    <h4 class="font-semibold text-sm">Lập trình Web</h4>
+                </div>
+                <div class="bg-slate-800/80 p-4 rounded-xl border border-slate-700/50 text-center hover:border-indigo-500/50 transition">
+                    <i class="fa-solid fa-mobile-screen-button text-2xl text-indigo-400 mb-2"></i>
+                    <h4 class="font-semibold text-sm">Đọc Sách</h4>
+                </div>
+                <div class="bg-slate-800/80 p-4 rounded-xl border border-slate-700/50 text-center hover:border-indigo-500/50 transition">
+                    <i class="fa-solid fa-language text-2xl text-indigo-400 mb-2"></i>
+                    <h4 class="font-semibold text-sm">Lướt mạng xã hội</h4>
+                </div>
+            </div>
+        </section>
+
+        <!-- Phần 3: Liên hệ -->
+        <section id="contact" class="space-y-6 backdrop-blur-sm bg-slate-900/40 p-8 rounded-2xl border border-slate-700/40 shadow-xl">
+            <h3 class="text-xl font-bold border-b border-slate-700/60 pb-2 text-indigo-400">Thông tin liên hệ</h3>
+            <div class="bg-slate-800/60 p-6 rounded-2xl border border-slate-700/50 space-y-4">
+                <div class="flex items-center gap-4 text-slate-300">
+                    <div class="w-10 h-10 rounded-lg bg-indigo-500/10 flex items-center justify-center text-indigo-400">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs text-slate-400">Email</p>
+                        <p class="text-sm font-medium">khoacap090109@gmail.com</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4 text-slate-300">
+                    <div class="w-10 h-10 rounded-lg bg-indigo-500/10 flex items-center justify-center text-indigo-400">                      
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
 </body>
 </html>
