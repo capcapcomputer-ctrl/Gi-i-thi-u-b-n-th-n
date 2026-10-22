@@ -10,14 +10,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
-        /* Cấu hình hình nền nền phủ toàn màn hình */
+        /* Cấu hình hình nền phủ toàn màn hình */
         .bg-custom-image {
-            /* Thay link ảnh nền của bạn vào URL dưới đây */
             background-image: linear-gradient(to bottom, rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.95)), 
-                              url('https://stock.adobe.com/search?k=digital+city+background');
+                              url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1920&q=80');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed; /* Giữ cố định ảnh nền khi cuộn trang */
+            background-attachment: fixed;
         }
     </style>
 </head>
@@ -25,73 +24,77 @@
 
     <!-- Header / Navbar -->
     <header class="p-6 max-w-4xl mx-auto w-full flex justify-between items-center backdrop-blur-md bg-slate-900/40 rounded-b-2xl border-b border-slate-700/30">
-        <h1 class="text-2xl font-bold text-indigo-400">Giới thiệu bản thân</h1>
+        <h1 class="text-2xl font-bold text-indigo-400">Giới thiệu cá nhân</h1>
         <nav class="space-x-4 text-sm font-medium">
             <a href="#about" class="hover:text-indigo-400 transition">Giới thiệu</a>
-            <a href="#skills" class="hover:text-indigo-400 transition">Kỹ năng</a>
+            <a href="#skills" class="hover:text-indigo-400 transition">Sở thích</a>
             <a href="#contact" class="hover:text-indigo-400 transition">Liên hệ</a>
         </nav>
     </header>
 
     <!-- Nội dung chính -->
-    <main class="max-w-4xl mx-auto px-6 py-8 w-full space-y-16">
+    <main class="max-w-4xl mx-auto px-6 py-8 w-full space-y-12">
         
         <!-- Phần 1: Giới thiệu chung -->
-    
-                
-            </div>
-            <div class="text-center md:text-left space-y-3">
-                <span class="bg-indigo-500/10 text-indigo-400 text-xs px-3 py-1 rounded-full font-medium border border-indigo-500/20">Xin chào 👋</span>
-                <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight">Tôi là <span class="text-indigo-400">Cáp Anh Khoa</span></h2>
-                <p class="text-slate-300 text-base leading-relaxed">
-                   Tôi rất thích Đam mê công nghệ, lập trình và khám phá những điều mới mẻ. Luôn chủ động học hỏi và phát triển bản thân mỗi ngày.
-                </p>
-                <div class="pt-2">
-                    <a href="#contact" class="inline-block bg-indigo-600 hover:bg-indigo-500 text-white font-medium px-5 py-2.5 rounded-lg transition shadow-md shadow-indigo-600/30 text-sm">
-                       
-                    </a>
-                </div>
+        <section id="about" class="backdrop-blur-sm bg-slate-900/40 p-8 rounded-2xl border border-slate-700/40 shadow-xl space-y-4">
+            <span class="bg-indigo-500/10 text-indigo-400 text-xs px-3 py-1 rounded-full font-medium border border-indigo-500/20 inline-block">Xin chào mọi người 👋</span>
+            
+            <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight">Mình là <span class="text-indigo-400">Anh Khoa</span> đây</h2>
+            
+            <p class="text-slate-300 text-base leading-relaxed max-w-2xl">
+                Mình rất đam mê lập trình code. Sở thích cá nhân của mình là lập trình, đọc sách và lướt mạng xã hội.
+            </p>
+
+            <div class="pt-2">
+                <a href="#contact" class="inline-block bg-indigo-600 hover:bg-indigo-500 text-white font-medium px-5 py-2.5 rounded-lg transition shadow-md shadow-indigo-600/30 text-sm">
+                    Liên hệ với tôi
+                </a>
             </div>
         </section>
 
-        <!-- Phần 2: Kỹ năng & Sở thích -->
+        <!-- Phần 2: Sở thích cá nhân -->
         <section id="skills" class="space-y-6 backdrop-blur-sm bg-slate-900/40 p-8 rounded-2xl border border-slate-700/40 shadow-xl">
-            <h3 class="text-xl font-bold border-b border-slate-700/60 pb-2 text-indigo-400">Kỹ năng & Sở thích</h3>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div class="bg-slate-800/80 p-4 rounded-xl border border-slate-700/50 text-center hover:border-indigo-500/50 transition">
-                    <i class="fa-solid fa-calculator text-2xl text-indigo-400 mb-2"></i>
-                    <h4 class="font-semibold text-sm">Toán học</h4>
-                </div>
+            <h3 class="text-xl font-bold border-b border-slate-700/60 pb-2 text-indigo-400">Sở thích cá nhân</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 <div class="bg-slate-800/80 p-4 rounded-xl border border-slate-700/50 text-center hover:border-indigo-500/50 transition">
                     <i class="fa-solid fa-code text-2xl text-indigo-400 mb-2"></i>
-                    <h4 class="font-semibold text-sm">Lập trình Web</h4>
+                    <h4 class="font-semibold text-sm">Lập trình</h4>
                 </div>
                 <div class="bg-slate-800/80 p-4 rounded-xl border border-slate-700/50 text-center hover:border-indigo-500/50 transition">
-                    <i class="fa-solid fa-mobile-screen-button text-2xl text-indigo-400 mb-2"></i>
-                    <h4 class="font-semibold text-sm">Đọc Sách</h4>
+                    <i class="fa-solid fa-book-open text-2xl text-indigo-400 mb-2"></i>
+                    <h4 class="font-semibold text-sm">Đọc sách</h4>
                 </div>
                 <div class="bg-slate-800/80 p-4 rounded-xl border border-slate-700/50 text-center hover:border-indigo-500/50 transition">
-                    <i class="fa-solid fa-language text-2xl text-indigo-400 mb-2"></i>
+                    <i class="fa-solid fa-globe text-2xl text-indigo-400 mb-2"></i>
                     <h4 class="font-semibold text-sm">Lướt mạng xã hội</h4>
                 </div>
             </div>
         </section>
 
-        <!-- Phần 3: Liên hệ -->
+        <!-- Phần 3: Thông tin liên hệ & Mạng xã hội -->
         <section id="contact" class="space-y-6 backdrop-blur-sm bg-slate-900/40 p-8 rounded-2xl border border-slate-700/40 shadow-xl">
-            <h3 class="text-xl font-bold border-b border-slate-700/60 pb-2 text-indigo-400">Thông tin liên hệ</h3>
-            <div class="bg-slate-800/60 p-6 rounded-2xl border border-slate-700/50 space-y-4">
-                <div class="flex items-center gap-4 text-slate-300">
-                    <div class="w-10 h-10 rounded-lg bg-indigo-500/10 flex items-center justify-center text-indigo-400">
-                        <i class="fa-solid fa-envelope"></i>
+            <h3 class="text-xl font-bold border-b border-slate-700/60 pb-2 text-indigo-400">Mạng xã hội & Liên hệ</h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <!-- Nút Facebook cá nhân -->
+                <a href="https://www.facebook.com/cap.anh.khoa" target="_blank" class="flex items-center gap-4 bg-slate-800/60 p-4 rounded-xl border border-slate-700/50 hover:border-blue-500/50 transition">
+                    <div class="w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center text-blue-400 shrink-0">
+                        <i class="fa-brands fa-facebook-f"></i>
                     </div>
                     <div>
-                        <p class="text-xs text-slate-400">Email</p>
-                        <p class="text-sm font-medium">khoacap090109@gmail.com</p>
+                        <p class="text-xs text-slate-400">Facebook cá nhân</p>
+                        <p class="text-sm font-medium text-slate-200">facebook.com/cap.anh.khoa</p>
                     </div>
-                </div>
-                <div class="flex items-center gap-4 text-slate-300">
-                    <div class="w-10 h-10 rounded-lg bg-indigo-500/10 flex items-center justify-center text-indigo-400">                      
+                </a>
+
+                <!-- Địa chỉ / Thông tin khác -->
+                <div class="flex items-center gap-4 bg-slate-800/60 p-4 rounded-xl border border-slate-700/50">
+                    <div class="w-10 h-10 rounded-lg bg-indigo-500/10 flex items-center justify-center text-indigo-400 shrink-0">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs text-slate-400">Địa chỉ</p>
+                        <p class="text-sm font-medium text-slate-200">Thành phố Hồ Chí Minh, Việt Nam</p>
                     </div>
                 </div>
             </div>
@@ -99,6 +102,10 @@
 
     </main>
 
+    <!-- Footer -->
+    <footer class="text-center py-6 text-xs text-slate-400 border-t border-slate-800/60 backdrop-blur-md bg-slate-900/40">
+        <p>Trang cá nhân</p>
+    </footer>
 
 </body>
 </html>
